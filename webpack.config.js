@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = (env) => {
   return {
     mode: env.mode || "development",
-    entry: "./src/index.js",
+    entry: "./src/index.ts",
     output: {
       path: path.resolve(__dirname, "build"),
       filename: "bundle.js",
@@ -17,7 +17,7 @@ module.exports = (env) => {
        */
       rules: [
         {
-          test: /\.(js)x?$/,
+          test: /\.(js|ts)x?$/,
           exclude: /node_modules/,
           /**
            * babel-loader
@@ -29,7 +29,7 @@ module.exports = (env) => {
       ],
     },
     resolve: {
-      extensions: [".js", ".jsx"], // Handles imports where extensions are not explicitly stated
+      extensions: [".js", ".jsx", ".ts", ".tsx"], // Handles imports where extensions are not explicitly stated
     },
     plugins: [
       /**

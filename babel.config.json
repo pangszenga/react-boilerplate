@@ -4,6 +4,7 @@
         [
             "@babel/preset-react", // Make it understand react --> outputs common js
             { "runtime": "automatic" } // Makes it understand react components (jsx) --> outputs common js ; don't need to import React from react in jsx files
-        ]
+        ], 
+        "@babel/preset-typescript"
     ] 
 }
