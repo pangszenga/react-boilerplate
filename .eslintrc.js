@@ -6,7 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'standard-with-typescript',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime' // Remove need to import React from 'react'
   ],
   overrides: [
     {
@@ -17,7 +17,7 @@ module.exports = {
     }
   ],
   parserOptions: {
-    project: './tsconfig.json',
+    project: './tsconfig.json', // supports TS linting
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
