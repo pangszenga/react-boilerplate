@@ -41,7 +41,11 @@ module.exports = {
         message:
           "Please import directly (e.g. import { useEffect } from 'react')."
       }
-    ]
+    ],
+    'react/self-closing-comp': ['error', {
+      component: true,
+      html: true
+    }]
   },
   root: true
 }
