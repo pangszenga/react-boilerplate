@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
     "build": "webpack --env mode=production",
-    "typecheck": "tsc "
+    "typecheck": "tsc ",
+    "lint": "eslint '*.{js,jsx,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +17,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
+    "@types/react": "^18.0.26",
     "babel-loader": "^9.1.0",
     "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",
@@ -28,6 +31,13 @@
   "devDependencies": {
     "@tsconfig/create-react-app": "^1.0.3",
     "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "eslint": "^8.32.0",
+    "eslint-config-standard-with-typescript": "^27.0.1",
+    "eslint-plugin-import": "^2.27.4",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.0",
     "typescript": "^4.9.4"
   }
 }
