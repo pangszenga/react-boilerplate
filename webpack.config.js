@@ -7,7 +7,9 @@ module.exports = (env) => {
     entry: "./src/index.ts",
     output: {
       path: path.resolve(__dirname, "build"),
-      filename: "bundle.js",
+      filename: "[name].[contenthash].bundle.js",
+      publicPath: "/",
+      clean: true, // Clean build folder before making new bundles
     },
     module: {
       /**
@@ -43,6 +45,7 @@ module.exports = (env) => {
       }),
     ],
     devServer: {
+      historyApiFallback: true, // As this app is a SPA, we do not want the application to look for /* and instead for index.html
       static: {
         directory: path.join(__dirname, "build"),
       },
