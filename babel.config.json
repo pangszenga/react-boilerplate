@@ -3,8 +3,12 @@
         "@babel/preset-env", // Make it understand newer js --> outputs common js
         [
             "@babel/preset-react", // Make it understand react --> outputs common js
-            { "runtime": "automatic" } // Makes it understand react components (jsx) --> outputs common js ; don't need to import React from react in jsx files
+            { 
+                "runtime": "automatic", // Makes it understand react components (jsx) --> outputs common js; don't need to import React from react in jsx files
+                "importSource": "@emotion/react" // Make it understand emotion/react because we are using newest version of react
+            } 
         ], 
         "@babel/preset-typescript"
-    ] 
+    ], 
+    "plugins": [ "@emotion/babel-plugin" ]
 }

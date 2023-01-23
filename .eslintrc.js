@@ -45,7 +45,8 @@ module.exports = {
     'react/self-closing-comp': ['error', {
       component: true,
       html: true
-    }]
+    }],
+    'react/no-unknown-property': ['error', { ignore: ['css'] }] // ignore unknown css prop
   },
   root: true
 }

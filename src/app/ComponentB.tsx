@@ -1,7 +1,13 @@
-const ComponentB = () => {
-    return (
-       <div>Cows</div> 
-    );
-};
+import { css } from '@emotion/react'
 
-export default ComponentB;
+const ComponentB = () => {
+  return (
+       <div
+        css={css`
+            background-color: hotpink;
+        `}
+        >Cows</div>
+  )
+}
+
+export default ComponentB
