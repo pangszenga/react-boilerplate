@@ -6,7 +6,7 @@ import {
 const HomePage = () => {
   return (
     <div>
-      <Link to="/poo">Poo</Link>
+      <Link to="/farm_animal">Farm Animals 🐄</Link>
       <p>Yee haw</p>
     </div>
   )
@@ -21,7 +21,7 @@ export const App = () => {
       <Suspense fallback={<div>Loading moos...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/poo" element={<ComponentB />} />
+          <Route path="/farm_animal" element={<ComponentB />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
